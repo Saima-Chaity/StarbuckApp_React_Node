@@ -1,6 +1,6 @@
 # StarbuckApp_React_Node
 
-This is the previous Starbuck App which I have changed into React. Still now I have developed the following features and new feature will be available soon.
+This is the previous Starbuck App which I have changed into React. Still now I have developed the following features.
 
 **Build width:**
 
