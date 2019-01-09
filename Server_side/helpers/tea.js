@@ -3,8 +3,8 @@ var Tea = require('../models/tea');
 
 exports.getTeas = function(req, res){
     Tea.find()
-    .then(function(books){
-        res.json(books);
+    .then(function(teas){
+        res.json(teas);
     })
     .catch(function(err){
         res.send(err);
@@ -15,23 +15,18 @@ exports.getTeas = function(req, res){
 
 exports.createTea = function(req, res){
   Tea.create(req.body)
-  .then(function(newBook){
-      res.status(201).json(newBook);
+  .then(function(newTea){
+      res.status(201).json(newTea);
   })
   .catch(function(err){
       res.send(err);
   })
 }
 
-// exports.newBook = function(req, res){
-//   res.redirect("/books/new")
-// }
-
-
 exports.getTea = function(req, res){
    Tea.findById({_id:req.params.id})
-   .then(function(foundBook){
-       res.json(foundBook);
+   .then(function(foundTea){
+       res.json(foundTea);
    })
    .catch(function(err){
        res.send(err);
@@ -41,8 +36,8 @@ exports.getTea = function(req, res){
 
 exports.updateTea =  function(req, res){
   Tea.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
-   .then(function(book){
-       res.json(book);
+   .then(function(tea){
+       res.json(tea);
    })
    .catch(function(err){
        res.send(err);

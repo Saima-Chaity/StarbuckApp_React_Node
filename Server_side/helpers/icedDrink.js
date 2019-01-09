@@ -3,8 +3,8 @@ var IcedDrink = require('../models/icedDrink');
 
 exports.getIcedDrinks = function(req, res){
     IcedDrink.find()
-    .then(function(books){
-        res.json(books);
+    .then(function(drinks){
+        res.json(drinks);
     })
     .catch(function(err){
         res.send(err);
@@ -15,23 +15,18 @@ exports.getIcedDrinks = function(req, res){
 
 exports.createIcedDrink = function(req, res){
   IcedDrink.create(req.body)
-  .then(function(newBook){
-      res.status(201).json(newBook);
+  .then(function(newDrink){
+      res.status(201).json(newDrink);
   })
   .catch(function(err){
       res.send(err);
   })
 }
 
-// exports.newBook = function(req, res){
-//   res.redirect("/books/new")
-// }
-
-
 exports.getIcedDrink = function(req, res){
    IcedDrink.findById({_id:req.params.id})
-   .then(function(foundBook){
-       res.json(foundBook);
+   .then(function(foundDrink){
+       res.json(foundDrink);
    })
    .catch(function(err){
        res.send(err);
@@ -41,8 +36,8 @@ exports.getIcedDrink = function(req, res){
 
 exports.updateIcedDrink =  function(req, res){
   IcedDrink.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
-   .then(function(book){
-       res.json(book);
+   .then(function(drink){
+       res.json(drink);
    })
    .catch(function(err){
        res.send(err);

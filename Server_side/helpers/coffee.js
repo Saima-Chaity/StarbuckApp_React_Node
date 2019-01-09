@@ -23,11 +23,6 @@ exports.createCoffee = function(req, res){
   })
 }
 
-// exports.newBook = function(req, res){
-//   res.redirect("/books/new")
-// }
-
-
 exports.getCoffee = function(req, res){
    Coffee.findById({_id:req.params.id})
    .then(function(foundCoffee){
