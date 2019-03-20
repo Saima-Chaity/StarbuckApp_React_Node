@@ -66,7 +66,7 @@ editTea(addedTea){
      <div>
         <br />
         <Button style={{ marginBottom: "10px"}}><a href={"/tea"}><i className="chevron circle left icon"></i>Back</a></Button>
-       <h1 style={{ "textAlign": "center" ,  "border": "5px solid white"}}>Edit Book</h1>
+       <h1 style={{ "textAlign": "center" ,  "border": "5px solid white"}}>Edit Tea</h1>
        <Form onSubmit={this.onSubmit.bind(this)}
         style={{ "width": "30%" , "margin": "auto", "border": "5px solid white"}}>
 
