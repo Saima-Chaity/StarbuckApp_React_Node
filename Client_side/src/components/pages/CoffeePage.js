@@ -14,7 +14,7 @@ state = {
       
 }
 
-  componentWillMount(){
+  componentDidMount(){
     this.getrecipes();
   }
 
