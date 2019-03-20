@@ -1,11 +1,11 @@
 {
-  "name": "todoapi",
+  "name": "recipeApp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node -- index.js"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,8 +16,6 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "mongoose": "^5.0.7",
-    "nodemon": "^1.15.1",
-    "request-promise": "^4.2.2",
-    "xml2js": "^0.4.19"
+    "nodemon": "^1.15.1"
   }
 }

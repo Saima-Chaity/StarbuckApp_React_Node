@@ -1,11 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Bakery = require("../models/bakery");
 var helpers = require("../helpers/bakery");
-var parseString = require ("xml2js");
-var request = require ("request-promise");
-
-
 
 router.route('/')
  .get(helpers.getBakerys)
