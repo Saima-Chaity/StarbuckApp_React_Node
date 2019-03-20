@@ -5,13 +5,6 @@ import {Form } from 'semantic-ui-react';
 
 
 class NewTeaForm extends Component{
-
-  state={
-    title:"",
-    image:"",
-
-    ingredients:"" 
- }
   
   addRecipe(newRecipe){
     axios.request({
@@ -27,7 +20,6 @@ class NewTeaForm extends Component{
     const newRecipe = {
       title: this.refs.title.value,
       image: this.refs.image.value,
-
       ingredients: this.refs.ingredients.value
     }
     this.addRecipe(newRecipe);

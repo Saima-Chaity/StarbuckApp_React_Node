@@ -5,13 +5,6 @@ import {Form } from 'semantic-ui-react'
 
 class NewCoffeeForm extends Component{
 
-  state={
-    title:"",
-    image:"",
-
-    ingredients:"" 
- }
-  
   addRecipe(newRecipe){
     axios.request({
       method:'post',

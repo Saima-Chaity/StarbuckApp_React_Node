@@ -4,13 +4,6 @@ import {Link} from 'react-router-dom';
 import {Form } from 'semantic-ui-react'
 
 class NewIcedDrinkForm extends Component{
-
-  state={
-    title:"",
-    image:"",
-
-    ingredients:"" 
- }
   
   addRecipe(newRecipe){
     axios.request({

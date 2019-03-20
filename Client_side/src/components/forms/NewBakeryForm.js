@@ -4,12 +4,6 @@ import {Link} from 'react-router-dom';
 import {Form } from 'semantic-ui-react'
 
 class NewBakeryForm extends Component{
-
-  state={
-    title:"",
-    image:"",
-    ingredients:"" 
- }
   
   addRecipe(newRecipe){
     axios.request({
