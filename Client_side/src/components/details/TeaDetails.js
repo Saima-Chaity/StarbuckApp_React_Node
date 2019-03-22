@@ -38,19 +38,12 @@ class TeaDetails extends Component{
        <br />
         <Button style={{ marginBottom: "10px"}}><a href={"/tea"}><i className="chevron circle left icon"></i>Back</a></Button>
 
-        <div style={{ "display":"flex", "justify-content": "space-between"}}>
-          
-          <div style={{ "width":"400px"}}>
-            
-            <Image src={this.state.details.image} alt = "img" style={{ "height":"400px", "width":"500px"}} />
-          </div>
-
-            <div style={{ "width":"800px"}}>        
-           
+        <div className="detailsPage">
+          <Image src={this.state.details.image} alt = "img" style={{ "height":"400px", "width":"500px"}} />
+            <div className="recipeDescription">        
               <h1 >{this.state.details.title}</h1>
               <div className="collection-item"><strong>Ingredients:</strong> {this.state.details.ingredients}</div>
-            </div>        
-         
+            </div>                
         </div>
 
         <br/>
