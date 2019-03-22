@@ -14,41 +14,34 @@ class TeaItem extends Component{
     }).map((tea, id) => {
       return(
         <div className="col-lg-3">
-          <div className="thumbnail" style={{ "height":"500px"}}>
-            <div key={tea._id}>
-            <Card>
-              <Image src={tea.image} alt = "Tea Image" />
-              <Card.Content>
-                <Card.Header>{tea.title}</Card.Header>
-                <Card.Description>
-                  <strong>Ingredrients: </strong>{tea.ingredients.substring(0, 80)}...<br/>
-                </Card.Description>
-              </Card.Content>
-              <Card.Content extra>
-                <a>
-                  <Icon name='right arrow'/>
-                  <Link to = {`/tea/show/${tea._id}`}>Read More</Link>
-                </a>
-              </Card.Content>
-            </Card>
-            </div>
+          <div key={id}>
+          <Card className="recipeItems">
+            <Image src={tea.image} alt = "Tea Image" />
+            <Card.Content>
+              <Card.Header>{tea.title}</Card.Header>
+              <Card.Description>
+                <strong>Ingredrients: </strong>{tea.ingredients.substring(0, 80)}...<br/>
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <a>
+                <Icon name='right arrow'/>
+                <Link to = {`/tea/show/${tea._id}`}>Read More</Link>
+              </a>
+            </Card.Content>
+          </Card>
           </div>
         </div>
       )
-
     })
 
     return (
-      <div style={{"border": "10px solid white"}}>
-
-	      <div className="row">
-
-          {teaItem}
-
-        </div>
-      </div>
-    
       
+      <div className="row">
+
+        {teaItem}
+
+      </div>
     )
   }
 }

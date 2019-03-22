@@ -14,24 +14,22 @@ class IcedDrinkItem extends Component{
     }).map((icedDrink, id) => {
       return(
         <div className="col-lg-3">
-          <div className="thumbnail" style={{ "height":"500px"}}>
-            <div key={icedDrink._id}>
-              <Card>
-                <Image src={icedDrink.image} alt = "IcedDrink Image" />
-                <Card.Content>
-                  <Card.Header>{icedDrink.title}</Card.Header>
-                  <Card.Description>
-                    <strong>Ingredrients: </strong>{icedDrink.ingredients.substring(0, 80)}...<br/>
-                  </Card.Description>
-                </Card.Content>
-                <Card.Content extra>
-                  <a>
-                    <Icon name='right arrow'/>
-                    <Link to = {`/icedDrink/show/${icedDrink._id}`}>Read More</Link>
-                  </a>
-                </Card.Content>
-              </Card>
-            </div>
+          <div key={id}>
+            <Card className="recipeItems">
+              <Image src={icedDrink.image} alt = "IcedDrink Image" />
+              <Card.Content>
+                <Card.Header>{icedDrink.title}</Card.Header>
+                <Card.Description>
+                  <strong>Ingredrients: </strong>{icedDrink.ingredients.substring(0, 80)}...<br/>
+                </Card.Description>
+              </Card.Content>
+              <Card.Content extra>
+                <a>
+                  <Icon name='right arrow'/>
+                  <Link to = {`/icedDrink/show/${icedDrink._id}`}>Read More</Link>
+                </a>
+              </Card.Content>
+            </Card>
           </div>
         </div>
       )
@@ -39,13 +37,11 @@ class IcedDrinkItem extends Component{
     })
 
     return (
-      <div style={{"border": "10px solid white"}}>
 
-	      <div className="row">
+      <div className="row">
 
-          {icedDrinkItem}
+        {icedDrinkItem}
 
-        </div>
       </div>
       
     )

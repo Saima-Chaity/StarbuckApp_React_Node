@@ -13,24 +13,22 @@ class BakeryItem extends Component{
     }).map((bakery, id) => {
       return(
         <div className="col-lg-3">
-          <div className="thumbnail" style={{ "height":"500px"}}>
-            <div key={bakery._id}>
-              <Card>
-                <Image src={bakery.image} alt = "Bakery Image" />
-                <Card.Content>
-                  <Card.Header>{bakery.title}</Card.Header>
-                  <Card.Description>
-                    <strong>Ingredrients: </strong>{bakery.ingredients.substring(0, 80)}...<br/>
-                  </Card.Description>
-                </Card.Content>
-                <Card.Content extra>
-                  <a>
-                    <Icon name='right arrow'/>
-                    <Link to = {`/bakery/show/${bakery._id}`}>Read More</Link>
-                  </a>
-                </Card.Content>
-              </Card>
-            </div>
+          <div key={id}>
+            <Card className="recipeItems">
+              <Image src={bakery.image} alt = "Bakery Image" />
+              <Card.Content>
+                <Card.Header>{bakery.title}</Card.Header>
+                <Card.Description>
+                  <strong>Ingredrients: </strong>{bakery.ingredients.substring(0, 80)}...<br/>
+                </Card.Description>
+              </Card.Content>
+              <Card.Content extra>
+                <a>
+                  <Icon name='right arrow'/>
+                  <Link to = {`/bakery/show/${bakery._id}`}>Read More</Link>
+                </a>
+              </Card.Content>
+            </Card>
           </div>
         </div>
       )
@@ -38,15 +36,12 @@ class BakeryItem extends Component{
     })
 
     return (
-      <div style={{"border": "10px solid white"}}>
 
-	      <div className="row">
+      <div className="row">
 
-          {bakeryItem}
+        {bakeryItem}
 
-        </div>
-      </div>
-      
+      </div>      
     )
   }
 }

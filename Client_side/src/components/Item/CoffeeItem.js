@@ -16,9 +16,8 @@ class CoffeeItem extends Component{
       return(
         
         <div className="col-lg-3">
-          <div className="thumbnail" style={{ "height":"500px"}}>
-            <div key={coffee._id}>
-              <Card>
+            <div key={id}>
+              <Card className="recipeItems">
                 <Image src={coffee.image} alt = "Coffee Image" />
                 <Card.Content>
                   <Card.Header>{coffee.title}</Card.Header>
@@ -27,33 +26,23 @@ class CoffeeItem extends Component{
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <a>
-                    <Icon name='right arrow'/>
+                <Icon name='right arrow'/>
                     <Link to = {`/coffee/show/${coffee._id}`}>Read More</Link>
-                  </a>
                 </Card.Content>
               </Card>
             </div>
-          </div>
         </div>
-       
-        
       )
 
     }) 
 
     return (
-      <div style={{"border": "10px solid white"}}>
-     
+
         <div className="row">
 
             {coffeeItem}
 
          </div>
-
-
-          
-      </div>
       
     )
   }

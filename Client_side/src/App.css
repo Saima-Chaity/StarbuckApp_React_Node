@@ -19,3 +19,23 @@
 .buttonText{
     color: olivedrab;
 }
+
+.detailsPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recipeDescription{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.recipeItems{
+    height: 480px;
+}
+
+.row{
+    border: 10px solid white;
+}
