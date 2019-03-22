@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-import {Form } from 'semantic-ui-react'
+import {Form, Button, Icon } from 'semantic-ui-react'
 
 class NewBakeryForm extends Component{
   
@@ -31,14 +31,14 @@ class NewBakeryForm extends Component{
      <div>
         <br />
        <Link className="btn grey" to="/">Back</Link>
-       <h1>Add New Recipe</h1>
+       <h1 style={{ "textAlign": "center" ,  "border": "5px solid white" }}>Add New Recipe</h1>
        <Form onSubmit={this.onSubmit.bind(this)}
           style={{ "width": "50%" , "margin": "auto", "border": "5px solid white"}}>
 
           <Form.Field>
             <div className="input-field">
               <label htmlFor="title">Title</label>
-              <input type="text" name="title" ref="title" />  
+              <input type="text" name="title" ref="title"/>  
             </div>
           </Form.Field>
 
@@ -54,9 +54,14 @@ class NewBakeryForm extends Component{
               <label htmlFor="ingredients">Ingredients</label>
               <input type="text" name="ingredients" ref="ingredients" />
             </div>
-            </Form.Field>
+          </Form.Field>
 
-          <input type="submit" value="Submit" className="btn" />
+          <Button animated>
+            <Button.Content visible>Submit</Button.Content>
+            <Button.Content hidden>
+              <Icon name='right arrow' />
+            </Button.Content>
+          </Button>
         </Form>
       </div>
     )
