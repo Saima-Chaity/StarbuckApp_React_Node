@@ -1,0 +1,21 @@
+.formHeader{
+    text-align: center;
+    color : olivedrab;
+    font-weight : bold;
+}
+
+.formBody{
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 20px;  
+}
+
+.input-field > label {
+    color : olivedrab;
+    font-weight : bold;
+    font-size: 17px;
+}
+
+.buttonText{
+    color: olivedrab;
+}

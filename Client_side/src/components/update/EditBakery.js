@@ -66,7 +66,7 @@ editBakery(addedBakery){
      <div>
         <br />
         <Button style={{ marginBottom: "10px"}}><a href={"/bakery"}><i className="chevron circle left icon"></i>Back</a></Button>
-       <h1 style={{ "textAlign": "center" ,  "border": "5px solid white"}}>Edit Bakery</h1>
+       <h1 className="formHeader">Edit Bakery</h1>
        <Form onSubmit={this.onSubmit.bind(this)}
         style={{ "width": "30%" , "margin": "auto", "border": "5px solid white"}}>
 

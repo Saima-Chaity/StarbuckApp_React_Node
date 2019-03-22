@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../../App.css';
 import {Link} from 'react-router-dom';
-import {Form, Button, Icon } from 'semantic-ui-react';
+import {Form, Button, Icon, Segment } from 'semantic-ui-react';
 
 
 class NewTeaForm extends Component{
@@ -31,11 +32,9 @@ class NewTeaForm extends Component{
     return (
      <div>
         <br />
-       <Link className="btn grey" to="/">Back</Link>
-       <h1 style={{ "textAlign": "center" ,  "border": "5px solid white"}}>Add New Recipe</h1>
-       <Form onSubmit={this.onSubmit.bind(this)}
-          style={{ "width": "50%" , "margin": "auto", "border": "5px solid white"}}>
-
+        <Button style={{ marginBottom: "10px"}}><a href={"/tea"}><i className="chevron circle left icon"></i>Back</a></Button>
+        <h2 className="formHeader">Add New Recipe</h2>
+        <Form className="formBody" onSubmit={this.onSubmit.bind(this)}>       
           <Form.Field>
             <div className="input-field">
               <label htmlFor="title">Title</label>
@@ -58,9 +57,9 @@ class NewTeaForm extends Component{
           </Form.Field>
 
           <Button animated>
-            <Button.Content visible>Submit</Button.Content>
+            <Button.Content visible className="buttonText">Submit</Button.Content>
             <Button.Content hidden>
-              <Icon name='right arrow' />
+              <Icon className="buttonText" name='right arrow' />
             </Button.Content>
           </Button>
         </Form>

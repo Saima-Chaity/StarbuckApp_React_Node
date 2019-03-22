@@ -30,11 +30,9 @@ class NewBakeryForm extends Component{
     return (
      <div>
         <br />
-       <Link className="btn grey" to="/">Back</Link>
-       <h1 style={{ "textAlign": "center" ,  "border": "5px solid white" }}>Add New Recipe</h1>
-       <Form onSubmit={this.onSubmit.bind(this)}
-          style={{ "width": "50%" , "margin": "auto", "border": "5px solid white"}}>
-
+        <Button style={{ marginBottom: "10px"}}><a href={"/bakery"}><i className="chevron circle left icon"></i>Back</a></Button>
+        <h1 className="formHeader">Add New Recipe</h1>
+        <Form className="formBody" onSubmit={this.onSubmit.bind(this)}>
           <Form.Field>
             <div className="input-field">
               <label htmlFor="title">Title</label>
@@ -57,9 +55,9 @@ class NewBakeryForm extends Component{
           </Form.Field>
 
           <Button animated>
-            <Button.Content visible>Submit</Button.Content>
+            <Button.Content visible className="buttonText">Submit</Button.Content>
             <Button.Content hidden>
-              <Icon name='right arrow' />
+              <Icon className="buttonText" name='right arrow' />
             </Button.Content>
           </Button>
         </Form>
