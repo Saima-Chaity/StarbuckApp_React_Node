@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-// import PropTypes from "prop-types";
-
-import {Header } from 'semantic-ui-react';
+import {Card, Image, Icon } from 'semantic-ui-react';
 
 class IcedDrinkItem extends Component{
 
@@ -18,10 +16,21 @@ class IcedDrinkItem extends Component{
         <div className="col-lg-3">
           <div className="thumbnail" style={{ "height":"500px"}}>
             <div key={icedDrink._id}>
-              <strong> <Header>{icedDrink.title}</Header></strong> <br/>
-              <img src = {icedDrink.image}  alt = "img" style={{ "height":"300px"}} /><br/>
-              <strong>Ingredrients: </strong>{icedDrink.ingredients.substring(0, 80)}...<br/>
-              <Link to = {`/icedDrink/show/${icedDrink._id}`}>Read More</Link>
+              <Card>
+                <Image src={icedDrink.image} alt = "IcedDrink Image" />
+                <Card.Content>
+                  <Card.Header>{icedDrink.title}</Card.Header>
+                  <Card.Description>
+                    <strong>Ingredrients: </strong>{icedDrink.ingredients.substring(0, 80)}...<br/>
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <a>
+                    <Icon name='right arrow'/>
+                    <Link to = {`/icedDrink/show/${icedDrink._id}`}>Read More</Link>
+                  </a>
+                </Card.Content>
+              </Card>
             </div>
           </div>
         </div>
