@@ -1,0 +1,75 @@
+.coffeeFinder{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: grey;
+}
+
+.landingPageImage{
+    width: 600px;
+    height: 400px;
+}
+
+.landingPagelastImage{
+    width: 100%;
+    height: 400px;
+}
+
+.columnDescription{
+    position: absolute;
+    top:30px;
+    left: 10px;
+    width: 50%;
+    height: auto;
+    color: white;
+}
+
+.columnDescriptionForBrewing{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    bottom: 5px;
+    left: 25px;
+    width: 90%;
+    height: auto;
+    color: white;
+}
+
+.socialMediaIcon{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    top: 20px;
+}
+
+.socialMediaIcon a{
+    font-size: 30px;
+    padding: 10px 15px;
+}
+
+@media only screen and (max-width: 680px) {
+    .landingPageImage{
+        width: 400px;
+        height: 250px;
+        margin-top:150px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .landingPageImage{
+        width: 320px;
+        height: 200px;
+        margin-top:200px;
+    }
+
+    .landingPagelastImage{
+        width: 100%;
+        height: 350px;
+    }
+
+    .columnDescriptionForBrewing{
+        right: 20px;
+        left: 20px;
+    }
+}
