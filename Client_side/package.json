@@ -16,7 +16,7 @@
     "semantic-ui-css": "^2.3.0",
     "semantic-ui-react": "^0.78.3"
   },
-  "proxy": "http://localhost:8081",
+  "proxy": "https://recipeappinreactnode.azurewebsites.net",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
