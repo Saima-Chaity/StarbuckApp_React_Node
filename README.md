@@ -1,22 +1,24 @@
 # StarbuckApp_React_Node
 
-This is the previous Starbuck App which I have changed into React. Still now I have developed the following features.
+While working at starbuck as barista I developed this app to quickly find the recipe rather than shuffling through the paper documentation.   
+
+**Demo:** [Project Demo](https://recipeappinreactnode.azurewebsites.net)
 
 **Build width:**
 
 - React
 - Node
+- Express
 - MongoDB
 - Semantic UI
+- Bootstrap
+- Microsoft Azure
 
 **Features:**
 
+- Recipe list with create, edit, delete actions on recipe posts.
+- Search feature to find the recipe quickly.
 - All the recipes are organized into different categories.
-- Provides an opportunity to add new recipe to specific category
-- Finds out the recipe information through search input
-- Provides detailed information of the recipe and 
-- Provides a way to edit and delete the recipe
-
 
 ## Different recipe routes -
 
