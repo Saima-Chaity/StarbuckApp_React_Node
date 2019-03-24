@@ -17,7 +17,7 @@ componentDidMount(){
   }
 
    getrecipes(){
-    axios.get('http://localhost:3000/api/icedDrink')
+    axios.get('https://recipeappinreactnode.azurewebsites.net/api/icedDrink')
       .then(response => {
 
         this.setState({recipes: response.data})

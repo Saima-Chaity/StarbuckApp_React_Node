@@ -10,7 +10,7 @@ class NewTeaForm extends Component{
   addRecipe(newRecipe){
     axios.request({
       method:'post',
-      url:'http://localhost:3000/api/tea',
+      url:'https://recipeappinreactnode.azurewebsites.net/api/tea',
       data: newRecipe
     }).then(response => {
       this.props.history.push('/tea');

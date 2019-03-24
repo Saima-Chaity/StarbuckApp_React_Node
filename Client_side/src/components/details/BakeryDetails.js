@@ -16,7 +16,7 @@ class BakeryDetails extends Component{
 
   getBakery(){
     let id = this.props.match.params.id;
-    axios.get(`http://localhost:3000/api/bakery/${id}`)
+    axios.get(`https://recipeappinreactnode.azurewebsites.net/api/bakery/${id}`)
     .then(response => {
       this.setState({details: response.data})
   })
@@ -25,7 +25,7 @@ class BakeryDetails extends Component{
 
   onDelete(){
     let id = this.state.details._id;
-    axios.delete(`http://localhost:3000/api/bakery/${id}`)
+    axios.delete(`https://recipeappinreactnode.azurewebsites.net/api/bakery/${id}`)
       .then(response => {
         this.props.history.push('/bakery');
       }).catch(err => console.log(err));

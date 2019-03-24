@@ -17,7 +17,7 @@ class EditTea extends Component{
 
   getTeaDetails(){
     let id = this.props.match.params.id;
-    axios.get(`http://localhost:3000/api/tea/${id}`)
+    axios.get(`https://recipeappinreactnode.azurewebsites.net/api/tea/${id}`)
     .then(response => {
       this.setState({
         id: response.data._id,
@@ -33,7 +33,7 @@ editTea(addedTea){
   let id = this.state.id;
    axios.request({
       method:'put',
-      url:`http://localhost:3000/api/tea/${id}`,
+      url:`https://recipeappinreactnode.azurewebsites.net/api/tea/${id}`,
       data: addedTea,
       headers: {"Content-Type": "application/json"}
     }).then(response => {

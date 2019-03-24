@@ -8,7 +8,7 @@ class NewBakeryForm extends Component{
   addRecipe(newRecipe){
     axios.request({
       method:'post',
-      url:'http://localhost:3000/api/Bakery',
+      url:'https://recipeappinreactnode.azurewebsites.net/api/Bakery',
       data: newRecipe
     }).then(response => {
       this.props.history.push('/Bakery');

@@ -20,9 +20,7 @@ class CoffeeSearch extends Component {
                   placeholder='Search...'
                   type='text'
                   ref='filterInput'
-                  // binding the input value to state
                   value={search}
-                  // onChange ={e => this.setState({ searchBook: e.target.value })}
                   onChange={() => {
                    filterUpdate(this.refs.filterInput.value) 
                   }}

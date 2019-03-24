@@ -17,7 +17,7 @@ class EditBakery extends Component{
 
   getBakeryDetails(){
     let id = this.props.match.params.id;
-    axios.get(`http://localhost:3000/api/bakery/${id}`)
+    axios.get(`https://recipeappinreactnode.azurewebsites.net/api/bakery/${id}`)
     .then(response => {
       this.setState({
         id: response.data._id,
@@ -33,7 +33,7 @@ editBakery(addedBakery){
   let id = this.state.id;
    axios.request({
       method:'put',
-      url:`http://localhost:3000/api/bakery/${id}`,
+      url:`https://recipeappinreactnode.azurewebsites.net/api/bakery/${id}`,
       data: addedBakery,
       headers: {"Content-Type": "application/json"}
     }).then(response => {

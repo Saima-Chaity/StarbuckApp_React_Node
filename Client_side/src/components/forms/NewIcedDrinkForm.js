@@ -8,7 +8,7 @@ class NewIcedDrinkForm extends Component{
   addRecipe(newRecipe){
     axios.request({
       method:'post',
-      url:'http://localhost:3000/api/icedDrink',
+      url:'https://recipeappinreactnode.azurewebsites.net/api/icedDrink',
       data: newRecipe
     }).then(response => {
       this.props.history.push('/icedDrink');

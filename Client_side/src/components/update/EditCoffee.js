@@ -17,7 +17,7 @@ class EditCoffee extends Component{
 
   getCoffeeDetails(){
     let id = this.props.match.params.id;
-    axios.get(`http://localhost:3000/api/coffee/${id}`)
+    axios.get(`https://recipeappinreactnode.azurewebsites.net/api/coffee/${id}`)
     .then(response => {
       this.setState({
         id: response.data._id,
@@ -33,7 +33,7 @@ editCoffee(addedCoffee){
   let id = this.state.id;
    axios.request({
       method:'put',
-      url:`http://localhost:3000/api/coffee/${id}`,
+      url:`https://recipeappinreactnode.azurewebsites.net/api/coffee/${id}`,
       data: addedCoffee,
       headers: {"Content-Type": "application/json"}
     }).then(response => {

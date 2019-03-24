@@ -19,7 +19,7 @@ state = {
   }
 
    getrecipes(){
-    axios.get('http://localhost:3000/api/coffee')
+    axios.get('https://recipeappinreactnode.azurewebsites.net/api/coffee')
       .then(response => {
         this.setState({recipes: response.data}
       )

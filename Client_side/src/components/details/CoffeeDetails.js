@@ -17,7 +17,7 @@ class CoffeeDetails extends Component{
 
   getCoffee = ()=>{
     let id = this.props.match.params.id;
-    axios.get(`http://localhost:3000/api/coffee/${id}`)
+    axios.get(`https://recipeappinreactnode.azurewebsites.net/api/coffee/${id}`)
     .then(response => {
       this.setState({details: response.data})
   })
@@ -26,7 +26,7 @@ class CoffeeDetails extends Component{
 
   onDelete(){
     let id = this.state.details._id;
-    axios.delete(`http://localhost:3000/api/coffee/${id}`)
+    axios.delete(`https://recipeappinreactnode.azurewebsites.net/api/coffee/${id}`)
       .then(response => {
         this.props.history.push('/coffee');
       }).catch(err => console.log(err));
