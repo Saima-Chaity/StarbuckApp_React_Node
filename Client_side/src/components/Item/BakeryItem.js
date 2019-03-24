@@ -10,10 +10,10 @@ class BakeryItem extends Component{
   	const {recipes,search} = this.props;
 
   	const bakeryItem = recipes.filter(recipe => {
-      return recipe.title.toLowerCase().charAt(0).slice(0).indexOf(search.charAt(0).slice(0).toLowerCase()) >= 0
+      return recipe.title.toLowerCase().indexOf(search.toLowerCase()) >= 0
     }).map((bakery, id) => {
       return(
-        <div className="col-lg-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <div key={id}>
             <Card className="recipeItems">
               <Image src={bakery.image} alt = "Bakery Image" />
@@ -24,10 +24,8 @@ class BakeryItem extends Component{
                 </Card.Description>
               </Card.Content>
               <Card.Content extra>
-                <a>
-                  <Icon name='right arrow'/>
-                  <Link to = {`/bakery/show/${bakery._id}`}>Read More</Link>
-                </a>
+                <Icon name='right arrow'/>
+                <Link to = {`/bakery/show/${bakery._id}`}>Read More</Link>
               </Card.Content>
             </Card>
           </div>
