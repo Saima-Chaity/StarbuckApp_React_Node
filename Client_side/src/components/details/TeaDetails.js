@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Image, Button} from 'semantic-ui-react'
+import '../../stylesheets/main.css';
 
 
 class TeaDetails extends Component{
@@ -9,7 +10,6 @@ class TeaDetails extends Component{
       details:''
     }
   
-
   componentWillMount(){
     this.getTea();
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import {Card, Image, Icon } from 'semantic-ui-react';
+import '../../stylesheets/main.css';
 
 class CoffeeItem extends Component{
 

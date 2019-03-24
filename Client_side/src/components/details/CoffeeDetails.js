@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import {Image, Button} from 'semantic-ui-react'
 import axios from 'axios';
-
-
+import '../../stylesheets/main.css';
 
 class CoffeeDetails extends Component{
 
   state = {
       details:''
     }
-  
 
   componentWillMount(){
     this.getCoffee();

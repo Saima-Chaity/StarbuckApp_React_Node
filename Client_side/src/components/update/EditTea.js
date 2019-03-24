@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Form, Button, Icon} from "semantic-ui-react";
+import '../../stylesheets/main.css';
 
 class EditTea extends Component{
  state = {
       id:"",
       title:"",
       image:"",
-
       ingredients:"" 
     }
 

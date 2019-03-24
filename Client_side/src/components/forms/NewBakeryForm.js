@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {Form, Button, Icon } from 'semantic-ui-react'
+import '../../stylesheets/main.css';
 
 class NewBakeryForm extends Component{
   

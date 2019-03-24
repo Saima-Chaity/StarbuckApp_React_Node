@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Image, Button, Card, Icon} from 'semantic-ui-react'
+import '../../stylesheets/main.css';
 
 class IcedDrinkDetails extends Component{
 
@@ -8,7 +9,6 @@ class IcedDrinkDetails extends Component{
       details:''
     }
   
-
   componentWillMount(){
     this.getIcedDrink();
   }

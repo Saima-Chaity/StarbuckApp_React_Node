@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Image, Header, Button} from 'semantic-ui-react'
+import '../../stylesheets/main.css';
 
 class BakeryDetails extends Component{
 
   state = {
       details:''
     }
-  
 
   componentWillMount(){
     this.getBakery();

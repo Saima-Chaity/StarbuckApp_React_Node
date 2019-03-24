@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../../App.css';
 import {Link} from 'react-router-dom';
 import {Form, Button, Icon, Segment } from 'semantic-ui-react';
-
+import '../../stylesheets/main.css';
 
 class NewTeaForm extends Component{
   
