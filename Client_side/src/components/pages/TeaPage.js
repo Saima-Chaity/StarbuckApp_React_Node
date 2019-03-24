@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import TeaItem from '../Item/TeaItem';
 import Navbar from '../nav/Navbar';
+import { Segment, Image, Loader, Dimmer } from 'semantic-ui-react';
 
 class TeaPage extends Component{
 
 state = {
-
-      recipes: [],
-      search: ''
-      
+  recipes: [],
+  search: '',
+  loading: true,   
 }
 
   componentDidMount(){
@@ -19,7 +19,7 @@ state = {
    getrecipes(){
     axios.get('https://recipeappinreactnode.azurewebsites.net/api/tea')
       .then(response => {
-
+        this.setState({loading: false});
         this.setState({recipes: response.data})
     })
     .catch(err => console.log(err));
@@ -35,9 +35,6 @@ state = {
 
 
   render(){
-
-  
-
     return(
       <div>
        
@@ -47,9 +44,19 @@ state = {
 
        />
 
-        <TeaItem 
+      {this.state.loading ? 
+        (<Segment>
+          <Dimmer active inverted>
+            <Loader size='large'>Loading</Loader>
+          </Dimmer>
+    
+          <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+        </Segment>)
+        :  
+        (<TeaItem 
           recipes = {this.state.recipes}
-          search={this.state.search}/>
+          search={this.state.search}/>)
+      }
   
       </div>
         
