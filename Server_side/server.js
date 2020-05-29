@@ -17,12 +17,12 @@ console.log("Connected to Database");
     console.log("Not Connected to Database ERROR! ", err);
 });
 
-app.use(express.static(path.join(__dirname, '../Client_side/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '../Client_side/build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.use('/api/coffee', coffeeRoutes);

@@ -1,1 +1,1 @@
-web: nodemon --exec babel-node -- index.js
+web: node Server_side/server.js
