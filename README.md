@@ -1,6 +1,6 @@
 # StarbuckApp_React_Node
 
-While working at starbuck as barista I developed this app to quickly find the recipe rather than shuffling through the paper documentation. Please checkout the short video on [**YouTube**](https://youtu.be/Jk8YSQvdfBY) to get an quick overview of the application.
+While working at starbuck as barista I developed this app to quickly find the recipe rather than shuffling through the paper documentation. 
 
 **Build width:**
 
